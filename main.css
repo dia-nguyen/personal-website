@@ -109,6 +109,13 @@ h2.sub-heading{
   text-transform: initial;
 }
 
+small {
+  font-size: 0.6em;
+  display: block;
+  margin-top: 1em;
+  opacity: 0.5;
+}
+
 /* Button Styling */
 .btn {
   border: 1px solid;
