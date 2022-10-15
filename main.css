@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;800&family=Poppins:wght@100;200;300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;800&family=Poppins:wght@100;200;300;400;500&display=swap");
 
 @font-face {
   font-family: Bouncehouse Regular;
-  src: url('assets/bouncehouse-regular.otf') format('opentype');
+  src: url("assets/bouncehouse-regular.otf") format("opentype");
 }
 
 /* Color Variables */
@@ -10,7 +10,7 @@
   --dark: #1a1521;
   --light: #fbfbfb;
   --accent: #e8e0f5;
-  --dark-accent:#46365e;
+  --dark-accent: #46365e;
   --primary: #763fd4;
 
   --dark-mode-font: var(--light);
@@ -23,36 +23,36 @@
 }
 
 /* Light mode styling */
-body[theme=light] {
+body[theme="light"] {
   background-color: var(--light-mode-background);
   color: var(--light-mode-font);
 }
-body[theme=light] h1.heading {
+body[theme="light"] h1.heading {
   -webkit-text-stroke: 2px var(--primary);
 }
-body[theme=light] .blob path{
-  fill: var(--light-blob)
+body[theme="light"] .blob path {
+  fill: var(--light-blob);
 }
-body[theme=light] .btn:hover {
+body[theme="light"] .btn:hover {
   background: var(--primary);
   color: var(--light);
 }
 
 /* Dark mode styling */
-body[theme=dark] {
+body[theme="dark"] {
   background-color: var(--dark-mode-background);
-  color: var(--dark-mode-font)
+  color: var(--dark-mode-font);
 }
-body[theme=dark] h1.heading {
+body[theme="dark"] h1.heading {
   -webkit-text-stroke: 2px var(--dark-mode-font);
 }
-body[theme=dark] .plants path {
-  fill: var(--dark-mode-font)
+body[theme="dark"] .plants path {
+  fill: var(--dark-mode-font);
 }
-body[theme=dark] .blob path{
+body[theme="dark"] .blob path {
   fill: var(--dark-blob);
 }
-body[theme=dark] .btn:hover {
+body[theme="dark"] .btn:hover {
   background: var(--light);
   color: var(--primary);
 }
@@ -63,7 +63,7 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-size: 18px;
   overflow-x: hidden;
@@ -85,8 +85,10 @@ a {
   font-weight: bold;
 }
 
-h1, h2, h3 {
-  font-family: 'Bouncehouse Regular', sans-serif;
+h1,
+h2,
+h3 {
+  font-family: "Bouncehouse Regular", sans-serif;
   text-transform: uppercase;
 }
 
@@ -99,12 +101,12 @@ h1.heading {
 h2 {
   font-size: 3em;
   letter-spacing: 5px;
-  text-shadow: 1px 1px 20px rgba(255,255,255,0.5);
+  text-shadow: 1px 1px 20px rgba(255, 255, 255, 0.5);
 }
 
-h2.sub-heading{
+h2.sub-heading {
   font-size: 1.5em;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-weight: 300;
   text-transform: initial;
 }
@@ -119,33 +121,32 @@ small {
 /* Button Styling */
 .btn {
   border: 1px solid;
-  padding: .75em 1.25em;
+  padding: 0.75em 1.25em;
   border-radius: 30px;
   margin-top: 1em;
   font-size: 0.8em;
   text-transform: uppercase;
   letter-spacing: 1px;
   display: inline-block;
-  transition: all .2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
-
 /* Navigation Styling */
-nav{
+nav {
   padding: 1.5em;
   font-size: 1.25em;
   position: fixed;
   width: 100%;
 }
 
-nav ul{
+nav ul {
   list-style: none;
   display: flex;
   align-items: center;
 }
 
 nav ul li {
-  margin-right: 2em
+  margin-right: 2em;
 }
 
 nav .moon-container {
@@ -182,7 +183,7 @@ section {
 section p {
   max-width: 700px;
   margin-top: 1em;
-  text-align: initial
+  text-align: initial;
 }
 
 #about {
@@ -193,7 +194,6 @@ section p {
 #about .content {
   margin: 1em;
 }
-
 
 /* Social Icons Styling */
 .socials {
@@ -253,7 +253,7 @@ section p {
   bottom: -45%;
 }
 
-.plants path{
+.plants path {
   fill: var(--primary);
 }
 .bio-pic {
@@ -279,7 +279,7 @@ section p {
   padding: 0.2em 0.7em;
   border: 1px solid;
   border-radius: 30px;
-	animation: fadeInOut 1s ease-in-out 5;
+  animation: fadeInOut 1s ease-in-out 5;
   opacity: 0;
 }
 
@@ -295,39 +295,39 @@ section p {
 
 /* Animations */
 @keyframes float {
-	0% {
-		transform: translatey(0px);
-	}
-	50% {
-		transform: translatey(-20px);
-	}
-	100% {
-		transform: translatey(0px);
-	}
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
 }
 @keyframes fadeInOut {
   0% {
     opacity: 0;
   }
   50% {
-    opacity: 0.5
+    opacity: 0.5;
   }
   100% {
-    opacity: 0
+    opacity: 0;
   }
 }
 
 .float {
-	animation: float 5s ease-in-out infinite;
+  animation: float 5s ease-in-out infinite;
 }
 
 /* Some Responsiveness */
-@media (max-width: 1400px){
+@media (max-width: 1400px) {
   h1.heading {
     font-size: 9em;
   }
 }
-@media (max-width: 800px){
+@media (max-width: 800px) {
   body {
     font-size: 14px;
   }
@@ -341,15 +341,14 @@ section p {
   #about {
     display: unset;
   }
-  .flower, .leaf {
+  .flower,
+  .leaf {
     display: none;
   }
   .float {
     animation: none;
   }
-  section:nth-of-type(2) .blob{
+  section:nth-of-type(2) .blob {
     display: none;
   }
 }
-
-
