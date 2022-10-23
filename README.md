@@ -1,4 +1,6 @@
 # Rithm Prework: Personal Website
-## Diane Nguyen
 
 Personal responsive website featuring a short bio and contact information.
+
+
+[View Live](https://dianguyen95.github.io/personal-website)
