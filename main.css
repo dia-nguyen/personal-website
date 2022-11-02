@@ -210,7 +210,6 @@ section p {
 
 #projects .project {
   border-radius: 1em;
-  border: 1px solid var(--accent);
   padding: 1em;
   width: 250px;
   height: auto;
@@ -223,8 +222,8 @@ section p {
 
 #projects .project .img-preview {
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 215px;
+  height: 215px;
   border-radius: 1em;
   display: block;
   margin: auto;
@@ -247,7 +246,7 @@ section p {
 #projects .project .img-preview::before {
   content: "";
   background-color: var(--primary);
-  border-radius: 1em;
+  border-radius: 5px;
   z-index: 1;
 }
 
@@ -280,12 +279,8 @@ section p {
   height: 100%;
   object-fit: cover;
   position: relative;
-  border-radius: 1em;
+  border-radius: 5px;
   border: 1px solid var(--accent);
-}
-
-#projects .project .btn {
-  border-radius: 1em;
 }
 
 /* Social Icons Styling */
