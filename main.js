@@ -1,5 +1,9 @@
 "use strict";
 
+const PROJECT_IMG_PATH = "./assets";
+const PROJECT_URL_PATH = "https://dianguyen95.github.io";
+const projectsList = ["meme-generator", "memory-game"];
+
 /** Changes subheading text in a cycle */
 function changeSubheader() {
   let heading = [
@@ -43,8 +47,27 @@ function lightSwitch() {
   });
 }
 
+/** Creates divs and appends to projects section per project in projectsList */
+function generateProjects() {
+  projectsList.forEach((project) => {
+    let div = document.createElement("div");
+    let title = project.replace(/-/g, " ");
+    div.classList.add(project, "project");
+    div.innerHTML = `
+      <a href="#${project}" class="img-preview"><img src="${PROJECT_IMG_PATH}/${project}.png" alt=""></a>
+      <a href="${PROJECT_URL_PATH}/${project}" target="_blank" class="btn">${title}</a>
+      <a href="#projects" class="light-box" id="${project}">
+      <span style="background-image: url('${PROJECT_IMG_PATH}/${project}.png')"></span>
+    </a>
+    `;
+    let projects = document.querySelector(".projects-wrapper");
+    projects.append(div);
+  });
+}
+
 /** Initialize functions when DOM is loaded */
 document.addEventListener("DOMContentLoaded", function (event) {
   changeSubheader();
   lightSwitch();
+  generateProjects();
 });
